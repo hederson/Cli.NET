@@ -49,13 +49,17 @@ namespace Cli.NET.External.PlatformUtils
                 WorkingDirectory = _workDirectory
             };
 
-            StringBuilder sb = new();
-            Process? p = Process.Start(processInfo);
-            p.OutputDataReceived += (sender, args) => sb.AppendLine(args.Data);
-            p?.BeginOutputReadLine();
-            p?.WaitForExit();
+            StringBuilder stringBuilder = new();
+            Process? process = Process.Start(processInfo);
 
-            return sb.ToString();
+            if(process != null)
+            {
+                process.OutputDataReceived += (sender, args) => stringBuilder.AppendLine(args.Data);
+                process.BeginOutputReadLine();
+                process.WaitForExit();
+            }
+
+            return stringBuilder.ToString();
         }
     }
 }
