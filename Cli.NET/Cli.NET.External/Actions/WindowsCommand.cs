@@ -1,6 +1,7 @@
 ﻿using Cli.NET.Abstractions.Actions;
 using Cli.NET.External.Models.Windows;
 using Cli.NET.Tools;
+using Cli.NET.Models;
 using System.Diagnostics;
 using System.Text;
 
@@ -24,8 +25,15 @@ namespace Cli.NET.External.PlatformUtils
             switch(_commandHandler)
             {
                 case WindowsCommandHandler.CommandPrompt:
-                    var output = CallCommandPrompt(arguments);
-
+                    try
+                    {
+                        var output = CallCommandPrompt(arguments);
+                        if (_outputProvider != null) _outputProvider.AddLog(output, OutputType.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        if (_outputProvider != null) _outputProvider.AddLog(ex);
+                    }
                     break;
             }
         }
