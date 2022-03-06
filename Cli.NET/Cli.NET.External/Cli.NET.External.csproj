@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cli.NET.Abstractions\Cli.NET.Abstractions.csproj" />
+    <ProjectReference Include="..\Cli.NET\Cli.NET.csproj" />
+  </ItemGroup>
+
 </Project>
