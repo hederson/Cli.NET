@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RepositoryItems", "Reposito
 		..\README.MD = ..\README.MD
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cli.NET.External", "Cli.NET.External\Cli.NET.External.csproj", "{EF9D0CDF-9951-4A4C-A8AE-86C6C6F550F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{B57D8554-6089-4093-9251-9CE6A30B7D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B57D8554-6089-4093-9251-9CE6A30B7D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B57D8554-6089-4093-9251-9CE6A30B7D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF9D0CDF-9951-4A4C-A8AE-86C6C6F550F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF9D0CDF-9951-4A4C-A8AE-86C6C6F550F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF9D0CDF-9951-4A4C-A8AE-86C6C6F550F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF9D0CDF-9951-4A4C-A8AE-86C6C6F550F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
